@@ -41,14 +41,16 @@
 			/history
 				/pointhistory
 				/producthistory
+
 	/application
-		/user
-		/point
-		/product
-		/productsales
-		/history
-			/pointhistory
-			/producthistory
+		/facade
+			/user
+			/point
+			/product
+			/productsales
+			/history
+				/pointhistory
+				/producthistory
 	/domain
 		/service
 			/user
@@ -100,7 +102,7 @@
 				/pointhistory
 				/producthistory
 나-1) 세부설명
-- interfaces : api를 제공하는 controller 계층
+- interfaces : api를 제공하는 controller 계층이며, facade와 1:1관계를 가지며 동일 계층으로 간주
 - application : 서비스로직을 제공하는 service(usecase 및 facade) 계층(*integration test 대상)
 - domain : 서비스로직을 제공하기 위해 단위 도메인 서비스(컴포넌트)를 제공하는 계층 (*unit test 대상) 
 	- service : 단위 도메인 서비스 로직
@@ -119,6 +121,11 @@
 - 그 후 의존관계를 최소화할 수 있는 방안을 생각(Controller부터 상위계층까지 
 - 각 domain별 command 사용할때 파사드에서 서비스를 사용하는 단계에서 command를 사용하여 변환 후 전달
 (*다른 계층에서의 의존성은 최소화하고, 파사드 단계에서 최대한 책임이 이루어질 수 있도록)
+다-2) facade
+- api와 1:1관계를 지니며 하위 서비스를 통합하여 제공하는 도구로, controller의 api와 의존관계를 지니기에 해당 계층와 동일한 layer으로 간주
+- 조합하는 layer가 필요할 경우에만 선택적 사용
+- application 하위의 facade layer로 구성
+- 파사드에서 행위의 중심이 되는 도메인을 명명규칙으로 설정하며, 최대한 설계한 도메인과 일치하도록 구성
 
 라) 고민방안
 - server api 단계에서 (Presentation와 상호작용하는 계층) Request, Response를 단일 Entity로 사용하는 방안

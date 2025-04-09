@@ -47,6 +47,10 @@ dependencies {
 	
 	// https://mvnrepository.com/artifact/org.mockito/mockito-core
 	testImplementation("org.mockito:mockito-core:1.3")
+	
+	//lombok
+	compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.withType<Test> {

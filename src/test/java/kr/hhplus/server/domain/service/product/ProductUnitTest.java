@@ -6,6 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import annotation.UnitTest;
+
+@UnitTest
 public class ProductUnitTest {
 	
 	@Autowired

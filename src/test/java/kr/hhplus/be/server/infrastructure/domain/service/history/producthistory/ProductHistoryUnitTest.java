@@ -9,13 +9,16 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import annotation.UnitTest;
+
+@UnitTest
 public class ProductHistoryUnitTest {
 	@Autowired
 	ProductHistoryService productHistoryService;
 	
 	@Test
 	@DisplayName("[단위테스트] 상품 관리 내역을 기록한다.")
-	void chargeTest() {
+	void insertTest() {
 		/*
 		 * given
 		 * - 테스트에 사용할 변수 및 입력값을 정의한다.

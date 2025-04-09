@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.infrastructure.domain.service.history.pointhistory;
+package kr.hhplus.be.server.infrastructure.domainjparepository.history.pointhistory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,17 +10,16 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import annotation.UnitTest;
-import kr.hhplus.server.domain.service.point.PointService;
+import kr.hhplus.be.server.infrastructure.domain.service.history.pointhistory.PointHistoryService;
 
 @UnitTest
-public class PointHistoryUnitTest {
-	
+public class PointHistoryJpaRepositoryUnitTest {
 	@Autowired
-	PointHistoryService pointHistoryService;
+	PointHistoryJpaRepository pointHistoryJpaRepository;
 	
 	@Test
-	@DisplayName("[단위테스트] 포인트 충전 내역을 기록한다.")
-	void insertTest() {
+	@DisplayName("[DB단위테스트] 데이터베이스에 포인트 충전 내역을 기록한다.")
+	void chargeTest() {
 		/*
 		 * given
 		 * - 테스트에 사용할 변수 및 입력값을 정의한다.
@@ -43,7 +42,7 @@ public class PointHistoryUnitTest {
 		 * - 동작에 따른 상태 변화를 기억하거나, 대조군으로 활용하기 위한 과정이다.
 		 * - 검증 대상의 동작 하나만 기술한다.
 		 * */
-		int actualRow = pointHistoryService.insert(DTO);
+		int actualRow = pointHistoryJpaRepository.save(DTO);
 		
 		/*
 		 * Then

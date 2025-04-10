@@ -8,4 +8,6 @@ public interface PointJpaRepository extends JpaRepository<Long, PointDTO>{
 
 	int charge(PointDTO pointDTO);
 
+	int use(PointDTO pointDTO);
+
 }

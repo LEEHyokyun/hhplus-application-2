@@ -12,7 +12,11 @@ public class PointService {
 	@Autowired
 	PointJpaRepository pointJpaRepository;
 	
-	public int insert(PointDTO pointDTO) {
+	public int charge(PointDTO pointDTO) {
 		return pointJpaRepository.charge(pointDTO);
+	}
+	
+	public int use(PointDTO pointDTO) {
+		return pointJpaRepository.use(pointDTO);
 	}
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import kr.hhplus.be.server.application.product.ProductFacade;
 import kr.hhplus.be.server.domain.model.product.ProductDTO;
 import kr.hhplus.be.server.domain.service.product.ProductService;
 
@@ -19,6 +20,9 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
+	@Autowired
+	ProductFacade productFacade;
+	
 	@GetMapping("/search")
 	public List<ProductDTO> search(String productName){
 		return productService.search(productName);
@@ -27,5 +31,10 @@ public class ProductController {
 	@PostMapping("/order")
 	public int order(@RequestParam ProductDTO productDTO){
 		return productService.order(productDTO);
+	}
+	
+	@PostMapping("/orderpay")
+	public int orderAndPay(@RequestParam ProductDTO productDTO) {
+		return productFacade.orderAndPay(productDTO);
 	}
 }

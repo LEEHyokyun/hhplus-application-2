@@ -24,4 +24,9 @@ public class PointController {
 	public int use(PointDTO pointDTO) {
 		return pointService.use(pointDTO);
 	}
+	
+	@PostMapping("/search")
+	public PointDTO search(String userId) {
+		return pointService.search(userId);
+	}
 }

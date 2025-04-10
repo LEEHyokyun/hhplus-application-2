@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.domain.repository.point;
+package kr.hhplus.be.server.domain.service.point;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

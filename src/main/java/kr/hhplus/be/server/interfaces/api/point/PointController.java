@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.hhplus.be.server.domain.model.point.PointDTO;
-import kr.hhplus.be.server.domain.repository.point.PointService;
+import kr.hhplus.be.server.domain.service.point.PointService;
 
 @RequestMapping("/point")
 @RestController

@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.domain.repository.product;
+package kr.hhplus.be.server.domain.service.product;
 
 import java.util.List;
 

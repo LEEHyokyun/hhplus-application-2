@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.hhplus.be.server.domain.model.product.ProductDTO;
-import kr.hhplus.be.server.domain.repository.product.ProductService;
+import kr.hhplus.be.server.domain.service.product.ProductService;
 
 @RequestMapping("/product")
 @RestController

@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.domain.repository.history.producthistory;
+package kr.hhplus.be.server.domain.service.history.producthistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -13,6 +13,6 @@ public class PointService {
 	PointJpaRepository pointJpaRepository;
 	
 	public int insert(PointDTO pointDTO) {
-		return pointJpaRepository.save(pointDTO);
+		return pointJpaRepository.charge(pointDTO);
 	}
 }

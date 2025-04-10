@@ -45,7 +45,7 @@ public class ProductHistoryJpaRepositoryUnitTest {
 		 * - 동작에 따른 상태 변화를 기억하거나, 대조군으로 활용하기 위한 과정이다.
 		 * - 검증 대상의 동작 하나만 기술한다.
 		 * */
-		int actualRow = productHistoryJpaRepository.save(DTO);
+		int actualRow = productHistoryJpaRepository.insert(DTO);
 		
 		/*
 		 * Then

@@ -9,7 +9,7 @@ import kr.hhplus.be.server.domain.model.product.ProductDTO;
 import kr.hhplus.be.server.infrastructure.mybatis.product.ProductMapper;
 
 @Service
-public class productService {
+public class ProductService {
 	
 	@Autowired
 	ProductMapper productMapper;

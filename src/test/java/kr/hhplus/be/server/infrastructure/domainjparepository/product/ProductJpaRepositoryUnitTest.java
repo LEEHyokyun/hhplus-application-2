@@ -7,11 +7,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import annotation.UnitTest;
+import kr.hhplus.be.server.infrastructure.mybatis.product.ProductMapper;
 
 @UnitTest
 public class ProductJpaRepositoryUnitTest {
 	@Autowired
 	ProductJpaRepository productJpaRepository;
+	
+	@Autowired
+	ProductMapper productMapper;
 	
 	@Test
 	@DisplayName("[DB단위테스트] 상품 세부정보를 조회한다.")
@@ -31,8 +35,11 @@ public class ProductJpaRepositoryUnitTest {
 		 * - 동작에 따른 상태 변화를 기억하거나, 대조군으로 활용하기 위한 과정이다.
 		 * - 검증 대상의 동작 하나만 기술한다.
 		 * */
-		String actualProductName = productJpaRepository.select(productId).getProductName();
-		long actualProductQuantity = productJpaRepository.select(productId).getProductQuantity();
+		//String actualProductName = productJpaRepository.select(productId).getProductName();
+		//long actualProductQuantity = productJpaRepository.select(productId).getProductQuantity();
+		
+		String actualProductName = productMapper.search(productId).getProductName();
+		long actualProductQuantity = productMapper.search(productId).getProductQuantity();
 		
 		/*
 		 * Then
@@ -62,7 +69,7 @@ public class ProductJpaRepositoryUnitTest {
 		 * - 동작에 따른 상태 변화를 기억하거나, 대조군으로 활용하기 위한 과정이다.
 		 * - 검증 대상의 동작 하나만 기술한다.
 		 * */
-		long actualQuantity = productJpaRepository.save(productId, originalQuantity-orderQuantity);
+		long actualQuantity = productJpaRepository.order(productId, originalQuantity-orderQuantity);
 		
 		/*
 		 * Then

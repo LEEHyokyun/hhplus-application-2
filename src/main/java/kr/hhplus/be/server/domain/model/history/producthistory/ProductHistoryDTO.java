@@ -1,5 +1,7 @@
 package kr.hhplus.be.server.domain.model.history.producthistory;
 
+import lombok.Data;
+
 @Data
 public class ProductHistoryDTO {
 	
@@ -12,4 +14,6 @@ public class ProductHistoryDTO {
 	String historySequence;
 	String transactionType;
 	long orderQuantity;
+	String createdTime;
+	String modifiedTime;
 }

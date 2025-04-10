@@ -1,5 +1,7 @@
 package kr.hhplus.be.server.domain.model.product;
 
+import lombok.Data;
+
 @Data
 public class ProductDTO {
 	
@@ -9,5 +11,7 @@ public class ProductDTO {
 	
 	String productId;
 	String productName;
+	String createdTime;
+	String modifiedTime;
 	
 }

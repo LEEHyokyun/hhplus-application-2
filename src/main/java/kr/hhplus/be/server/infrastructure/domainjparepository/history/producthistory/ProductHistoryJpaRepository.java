@@ -6,6 +6,6 @@ import kr.hhplus.be.server.domain.model.history.producthistory.ProductHistoryDTO
 
 public interface ProductHistoryJpaRepository extends JpaRepository<Long, ProductHistoryDTO>{
 
-	int save(ProductHistoryDTO productHistoryDTO);
+	int insert(ProductHistoryDTO productHistoryDTO);
 
 }

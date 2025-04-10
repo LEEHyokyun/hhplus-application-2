@@ -49,8 +49,11 @@ dependencies {
 	testImplementation("org.mockito:mockito-core:1.3")
 	
 	//lombok
-	compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+	compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+    
+    //mybatis
+    implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4") 
 }
 
 tasks.withType<Test> {

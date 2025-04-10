@@ -42,7 +42,7 @@ public class PointHistoryJpaRepositoryUnitTest {
 		 * - 동작에 따른 상태 변화를 기억하거나, 대조군으로 활용하기 위한 과정이다.
 		 * - 검증 대상의 동작 하나만 기술한다.
 		 * */
-		int actualRow = pointHistoryJpaRepository.save(DTO);
+		int actualRow = pointHistoryJpaRepository.insert(DTO);
 		
 		/*
 		 * Then

@@ -1,5 +1,7 @@
 package kr.hhplus.be.server.domain.model.history.pointhistory;
 
+import lombok.Data;
+
 @Data
 public class PointHistoryDTO {
 	

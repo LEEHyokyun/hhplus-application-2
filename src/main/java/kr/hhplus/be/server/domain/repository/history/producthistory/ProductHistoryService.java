@@ -13,6 +13,6 @@ public class ProductHistoryService {
 	ProductHistoryJpaRepository productHistoryJpaRepository;
 	
 	public int insert(ProductHistoryDTO productHistoryDTO) {
-		return productHistoryJpaRepository.save(productHistoryDTO);
+		return productHistoryJpaRepository.insert(productHistoryDTO);
 	}
 }

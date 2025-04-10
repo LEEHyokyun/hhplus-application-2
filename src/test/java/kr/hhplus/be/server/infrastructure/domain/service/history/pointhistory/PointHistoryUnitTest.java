@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import annotation.UnitTest;
+import kr.hhplus.be.server.domain.repository.history.pointhistory.PointHistoryService;
 import kr.hhplus.server.domain.service.point.PointService;
 
 @UnitTest

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import annotation.UnitTest;
+import kr.hhplus.be.server.domain.repository.history.producthistory.ProductHistoryService;
 
 @UnitTest
 public class ProductHistoryUnitTest {
